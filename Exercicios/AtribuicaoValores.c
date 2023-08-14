@@ -9,7 +9,7 @@ int main() {
     char sexo = 'M';
     char *nome = "Neander";
 
-    //Formatação:
-    printf("%s tem %i, sexo: %c e esta pesando %.2f", nome, idade, sexo, peso);
+    //Formatação em saída de informações:
+    printf("%s tem %i, sexo: %c e esta pesando %.2f kg.", nome, idade, sexo, peso);
     return 0;
 }
