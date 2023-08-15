@@ -1,30 +1,30 @@
-//  Programa que lê 2 números inteiros e determina o seu quociente e resto da
-// divisão inteira.
+//  Programa que lÃª 2 nÃºmeros inteiros e determina o seu quociente e resto da
+// divisï¿½o inteira.
 
 //Bibliotecas em geral:
-//Entrada e saída de dados:
+//Entrada e saï¿½da de dados:
 #include <stdio.h>
-//Bibliteca ortográfica:
+//Bibliteca ortogrï¿½fica:
 #include <locale.h>
 
-//Função main:
+//Funï¿½ï¿½o main:
 int main() {
-    //Bibliteca ortográfica:
+    //Bibliteca ortogrï¿½fica:
     setlocale(LC_ALL, "Portuguese");
 
-    //Declaração de variáveis e resultados:
-    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
+    //Declaraï¿½ï¿½o de variï¿½veis e resultados:
+    printf("\n=================== COMEï¿½O DO PROGRAMA EM C ===================\n");
     int num1, num2;
-    //Atribuição e saída de valores das variáveis:
-    printf("Insira valores para multiplicação:");
-    printf("\n1º Valor: ");
+    //Atribuiï¿½ï¿½o e saï¿½da de valores das variaveis:
+    printf("Insira valores para multiplicaÃ§Ã£o:");
+    printf("\n1Âº Valor: ");
     scanf("%d", &num1);
-    printf("2º valor: ");
+    printf("2Âº valor: ");
     scanf("%d", &num2);
 
-    //Saída de dados:
+    //Saï¿½da de dados:
     printf("(%d)x(%d) = (%d)", num1, num2, (num1*num2));
+    printf("Quociente = (%d) e o Resto(%d)",(num1/num2), (num1%num2));
     printf("\n================================================================\n");
-
     return 0;
 }
