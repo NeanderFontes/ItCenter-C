@@ -17,7 +17,7 @@ int main() {
     int num1, num2;
     //Atribuição e saída de valores das variáveis:
     printf("Insira valores para multiplicação:");
-    printf("1º Valor: ");
+    printf("\n1º Valor: ");
     scanf("%d", &num1);
     printf("2º valor: ");
     scanf("%d", &num2);
