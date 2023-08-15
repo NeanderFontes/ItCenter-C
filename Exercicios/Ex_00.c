@@ -1,19 +1,19 @@
 
 //Bibliotecas em geral:
-//Entrada e saÃ­da de dados:
+//Entrada e saída de dados:
 #include <stdio.h>
-//Bibliteca ortogrÃ¡fica:
+//Bibliteca ortográfica:
 #include <locale.h>
 
-//FunÃ§Ã£o main:
+//Função main:
 int main() {
-    //Bibliteca ortogrÃ¡fica:
+    //Bibliteca ortográfica:
     setlocale(LC_ALL, "Portuguese");
     
-    //DeclaraÃ§Ã£o de variÃ¡veis e resultados:
-    printf("\n=================== COMEÃ‡O DO PROGRAMA EM C ===================\n");
+    //Declaração de variáveis e resultados:
+    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
     
-    //AtribuiÃ§Ã£o e saÃ­da de valores das variÃ¡veis:
+    //Atribuição e saída de valores das variáveis:
     printf("\n================================================================\n");
     return 0;
 }
