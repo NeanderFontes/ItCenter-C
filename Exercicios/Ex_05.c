@@ -11,11 +11,14 @@ int main() {
     
     //Declaração de variáveis e resultados:
     printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
-    char caractere1 = 'A'; caractere2 = 'a';
+    // char caractere1 = 'A'; caractere2 = 'a';
+    char caractere1;
 
     //Entrada e saída de dados formatados:
+    printf("Introduza um caractere qualquer: ");
+    caractere1 = getchar();
     printf("O Caractere '%c' tem valor na tabela ASCII = (%d)", caractere1, caractere1);
-    printf("O Caractere '%c' tem valor na tabela ASCII = (%d)", caractere2, caractere2);
+    // printf("O Caractere '%c' tem valor na tabela ASCII = (%d)", caractere2, caractere2);
     //Atribuição e saída de valores das variáveis:
     printf("\n================================================================\n");
     return 0;
