@@ -18,7 +18,7 @@ int main() {
     //Entrada e saída de dados formatados:
     printf("Introduza um caractere qualquer: ");
     caractere1 = getchar();
-    printf("O Caractere '%c' tem valor na tabela ASCII + 3 unidade = (%d)", caractere1, (caractere1 + 3));
+    printf("O Caractere '%c' tem valor na tabela ASCII + 3 unidade = (%c)", caractere1, (caractere1 + 3));
     // printf("O Caractere '%c' tem valor na tabela ASCII = (%d)", caractere2, caractere2);
     //Atribuição e saída de valores das variáveis:
     printf("\n================================================================\n");
