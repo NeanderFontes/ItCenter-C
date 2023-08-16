@@ -11,7 +11,7 @@ int main() {
     
     //Declaração de variáveis e resultados:
     printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
-    char nomeProduto;
+    char *nomeProduto;
     float precoProduto, precoFinal;
     int descontoProduto;
 
