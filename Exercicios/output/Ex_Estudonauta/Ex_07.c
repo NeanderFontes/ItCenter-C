@@ -1,4 +1,4 @@
-//Dobro e terça parte do numero, Obs sem Casting.
+//Dobro e terça parte do numero.
 
 //Bibliotecas específicas:
 #include <stdio.h>
@@ -18,7 +18,7 @@ int main() {
     printf("Digite um numero: ");
     scanf("%d", &num);
     printf("O dobro de (%d) = (%d)", num, (numDobro = num * 2));
-    printf("\nA terça parte de \"%d\" = (%.1f)", num, (numTercaParte = num / 3));
+    printf("\nA terça parte de \"%d\" = (%.1f)", num, ((float)numTercaParte = num / 3));
     //Atribuição e saída de valores das variáveis:
     printf("\n================================================================\n");
     return 0;
