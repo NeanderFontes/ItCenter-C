@@ -9,9 +9,9 @@ int main() {
     //Inicializacao da biblioteca ortografica:
     setlocale(LC_ALL, "Portuguese");
     
-    //Declaração de variáveis e resultados:
-    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
-    char nomeAluno;
+    //Declaraï¿½ï¿½o de variï¿½veis e resultados:
+    printf("\n=================== COMEï¿½O DO PROGRAMA EM C ===================\n");
+    char *nomeAluno;
     float nota1, nota2, media;
 
     //Entrada e saida de dados formatados:
@@ -22,8 +22,8 @@ int main() {
     printf("Nota 2: ");
     scanf(" %f", &nota2);
 
-    printf("O alunota %s com notas: %.1f + %.1f Média = %.1f", nomeAluno, nota1, nota2, (media = (nota1+nota2)/2));
-    //Atribuição e saída de valores das variáveis:
+    printf("O alunota %s com notas: %.1f + %.1f Mï¿½dia = %.1f", nomeAluno, nota1, nota2, (media = (nota1+nota2)/2));
+    //Atribuiï¿½ï¿½o e saï¿½da de valores das variï¿½veis:
     printf("\n================================================================\n");
     return 0;
 }
