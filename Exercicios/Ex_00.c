@@ -10,10 +10,12 @@ int main() {
     //Bibliteca ortográfica:
     setlocale(LC_ALL, "Portuguese");
     
-    //Declaração de variáveis e resultados:
+    //Inicio do programa:
     printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
     
-    //Atribuição e saída de valores das variáveis:
+    //Declaração de variáveis e resultados:
+    
+    //Final do Programa.
     printf("\n================================================================\n");
     return 0;
 }
