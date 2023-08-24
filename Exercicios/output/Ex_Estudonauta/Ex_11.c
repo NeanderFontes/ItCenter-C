@@ -21,8 +21,7 @@ int main() {
     printf("Digite um numero inteiro: ");
     fflush(stdin);
     scanf("%d", &numEntrada);
-    printf("O Número %d digitado é ", numEntrada);
-    printf((numEntrada % 2 == 0) ? "Par" : "Impar");
+    printf("O Número %d digitado é %s", numEntrada, (numEntrada % 2 == 0) ? "Par" : "Impar");
 
     //Final do Programa.
     printf("\n================================================================\n");

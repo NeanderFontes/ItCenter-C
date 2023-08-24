@@ -18,8 +18,10 @@ int main() {
 
     //Entrada e saída de dados formatados:
     printf("Insira 1ª Nota: ");
+    fflush(stdin);
     scanf("%f", &nota1);
     printf("Insira a 2ª Nota: ");
+    fflush(stdin);
     scanf("%f", &nota2);
     mediaAluno = ((nota1+nota2)/2);
     //Operador ternário:
