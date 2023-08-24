@@ -1,31 +1,34 @@
-//Preço do produto final com desconto:
+//Preï¿½o do produto final com desconto:
 
-//Biblioteca específicas:
+//Biblioteca especï¿½ficas:
 #include <stdio.h>
 #include <locale.h>
 
-//Função main:
+//Funï¿½ï¿½o main:
 int main() {
-    //Inicialização da biblioteca ortográfica:
+    //Inicializaï¿½ï¿½o da biblioteca ortogrï¿½fica:
     setlocale(LC_ALL, "Portuguese");
     
-    //Declaração de variáveis e resultados:
-    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
+    //Declaraï¿½ï¿½o de variï¿½veis e resultados:
+    printf("\n=================== COMEï¿½O DO PROGRAMA EM C ===================\n");
     char *nomeProduto;
     float precoProduto, precoFinal;
     int descontoProduto;
 
-    //Entrada e saída de dados formatados:
+    //Entrada e saï¿½da de dados formatados:
     printf("Nome do produto: ");
+    fflush(stdin);
     gets(nomeProduto);
-    printf("Qual o preço do produto? ");
+    printf("Qual o preÃ§o do produto? ");
+    fflush(stdin);
     scanf("%f", &precoProduto);
+    fflush(stdin);
     printf("Desconto: (%%) ");
     scanf("%d", &descontoProduto);
     precoFinal = (precoProduto - (precoProduto * descontoProduto / 100));
 
-    printf("O Produto %s custava R$%.1f, com desconto de %d%% preço final = R$%.1f", nomeProduto, precoProduto, descontoProduto, precoFinal);
-    //Atribuição e saída de valores das variáveis:
+    printf("O Produto %s custava R$%.2f, com desconto de %d%% preÃ§o final = R$%.2f", nomeProduto, precoProduto, descontoProduto, precoFinal);
+    //Atribuiï¿½ï¿½o e saï¿½da de valores das variï¿½veis:
     printf("\n================================================================\n");
     return 0;
 }
