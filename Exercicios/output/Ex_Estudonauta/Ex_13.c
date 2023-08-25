@@ -28,8 +28,10 @@ int main() {
     //Entrada dados pelo usuário: 
     printf("\nPara Operadores Left Shift e Right Shift insira valores:");
     printf("\nInsira o valor inteiro: ");
+    fflush(stdin);
     scanf("%d", &numShift);
     printf("Quantidade de deslocamento bitwise: ");
+    fflush(stdin);
     scanf("%d", &numDeslocamento);
     printf("\t\t+++++++++ OPERAÇÕES BITWISE +++++++++");
     //Resultados com Conjunção:
