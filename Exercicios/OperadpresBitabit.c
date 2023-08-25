@@ -1,5 +1,6 @@
 //Operadores bit a bit ou mais conhecidos como Bitwise, são operações lógicas que
-// utiliza a (&)Conjunção, (|)Disjunção e (^)Disjunção Exclusiva na linguagem C
+// utiliza a (&)Conjunção, (|)Disjunção, (^)Disjunção Exclusiva
+// (<<)Left Shift e (>>)Right Shift na linguagem C
 // equivalendo aos valores de (true = 1) e (false = 0) e ao final da operação lógica
 // é somado somente os valores com resultados "1" em base exponencial.
 
@@ -31,6 +32,15 @@ int main() {
     //Disjunção Exclusiva:
     numResultado = num1 ^ num2;
     printf("\nO número %d ^ %d = %d", num1, num2, numResultado);
+
+    //Left Shift:
+    numResultado = num2 << 2; //Deslocalmento para Esquerda de 2 bits
+    printf("\nO Número %d com DESLOCALMENTO << 2 bits = %d", num2, numResultado);
+
+    //Right Shift:
+    numResultado = num2 >> 2; //Deslocamento para Direita de 2 bits
+    printf("\nO Número %d com DESLOCALMENTO >> 2 bits = %d", num2, numResultado);
+
 
     //Final do Programa.
     printf("\n================================================================\n");
