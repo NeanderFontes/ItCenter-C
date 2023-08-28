@@ -18,9 +18,9 @@ int main() {
     time_t tempoSistema;
     //Inclusão na variável no &tempoSistema:
     time(&tempoSistema);
-    //Ativação
+    //Ativação da estrutura em uma variável criada e apontada na estrutura:
     struct tm *dataLocal;
-    //Criação da estutura capturada do sistema:
+    //Com a Variável apontada na estrutura recebe o localtime da inicialização da biblioteca:
     dataLocal = localtime(&tempoSistema);
 
     //Declaração de variáveis e resultados:
