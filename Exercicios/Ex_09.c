@@ -1,5 +1,5 @@
 // Cria um programa que determine se um número real lido através do 
-// teclado se encontra no intervalo [1.0,1.9].
+// teclado se encontra no intervalo [1.0 - 4.9].
 
 //Bibliotecas necessárias:
 #include <stdio.h>
@@ -20,10 +20,10 @@ int main() {
     //Entrada e saída de dados formatados:
     printf("Introduza um número decimal: ");
     scanf("%f", &numEntrada);
-    if(numEntrada >= 1.0 && numEntrada <= 1.9) {
-        printf("O Número (%.1f) encontra-se no intervalo");
+    if(numEntrada >= 1.0 && numEntrada <= 4.9) {
+        printf("O Número (%.1f) encontra-se no intervalo [1.0 - 4.9]", numEntrada);
     } else {
-        printf("O Número (%.1f) não encontra-se no intervalo");
+        printf("O Número (%.1f) não encontra-se no intervalo [1.0 - 4.9]", numEntrada);
     }
 
     //Final do Programa.
