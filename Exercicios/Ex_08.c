@@ -1,37 +1,37 @@
-    //  Cria um programa que leia um nÃºmero inteiro e determine se este Ã© 
+    //  Cria um programa que leia um número inteiro e determine se este é 
     // par e positivo. 
 
-//Bibliotecas especÃ­ficas:
+//Bibliotecas específicas:
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
 
-//FuncÃ§Ã£o main:
+//Funcção main:
 int main() {
-    //Inicializando biblioteca ortogrÃ¡fica:
+    //Inicializando biblioteca ortográfica:
     setlocale(LC_ALL, "Portuguese");
     
     //Inicio do programa:
-    printf("\n=================== COMEÃ‡O DO PROGRAMA EM C ===================\n");
+    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
     
-    //DeclaraÃ§Ã£o de variÃ¡veis e resultados:
+    //Declaração de variáveis e resultados:
     int numEntrada;
     char analisarNum[10];
     
-    //Entrada e saÃ­da de dados formatados:
+    //Entrada e saída de dados formatados:
     printf("Insira um valor inteiro: ");
     scanf("%d", &numEntrada);
-    //ResoluÃ§Ã£o com estrutura de controle if:
-    if(numEntrada % 2 == 0 && numEntrada > 0) {
-        printf("\nNumero inserido Ã© Par e Positivo.");
-    } else if(numEntrada % 2 == 0 && numEntrada < 0) {
-        printf("\nNumero inserido Ã© Par e Negativo");
-    } else if(numEntrada % 2 != 0 && numEntrada > 0){
-        printf("\nNumero inserido Ã© Impar e Positivo.");
-    } else (numEntrada % 2 != 0 && numEntrada < 0){
-        printf("\nNumero inserido Ã© Impar e Negativo");
+    //Resolução com estrutura de controle if:
+    if (numEntrada % 2 == 0 && numEntrada > 0) {
+        printf("\nNúmero inserido é Par e Positivo.");
+    } else if (numEntrada % 2 == 0 && numEntrada < 0) {
+        printf("\nNúmero inserido é Par e Negativo.");
+    } else if (numEntrada % 2 != 0 && numEntrada > 0) {
+        printf("\nNúmero inserido é Ímpar e Positivo.");
+    } else if (numEntrada % 2 != 0 && numEntrada < 0) {
+        printf("\nNúmero inserido é Ímpar e Negativo.");
     } else {
-        printf("\nNumero inserido Ã© 0")
+        printf("\nNúmero inserido é 0.");
     }
 
     //Final do Programa.
