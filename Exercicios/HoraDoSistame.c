@@ -32,7 +32,7 @@ int main() {
     printf("O Dia de hoje através do seu Sistema Operacional = %d", diaAtual);
     printf("\nO Mês de hoje através do seu Sistema Operacional = %d", mesAtual);
     printf("\nO Ano de hoje através do seu Sistema Operacional = %d", anoAtual);
-    printf("\nEstamos atualmente em %d/%d/%d", diaAtual, mesAtual, anoAtual);
+    printf("\nEstamos atualmente em %02d/%02d/%d", diaAtual, mesAtual, anoAtual);
     //Final do Programa.
     printf("\n================================================================\n");
     return 0;
