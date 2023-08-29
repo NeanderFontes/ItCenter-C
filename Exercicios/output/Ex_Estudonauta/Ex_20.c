@@ -5,7 +5,6 @@
 //Diretivas de pré-processamento:
 #include <stdio.h>
 #include <locale.h>
-#include <string.h>
 
 //Função principal:
 int main() {
