@@ -58,7 +58,7 @@ void maxOcorrencia(int ocorrencias[], int diaOcorrencia) {
             diaMax = (numOcorrencias + 1);
         }
     }
-    printf("\nO Valor maximo de ocorrencia foi de %d no dia %d", maxNumOcorrencia, diaMax);
+    printf("\n***** O Valor maximo de ocorrencia foi de %d no dia %d *****\n", maxNumOcorrencia, diaMax);
 }
 
 //Função para preencher o min de numero de ocorrencias:
@@ -71,7 +71,7 @@ void minOcorrencia(int ocorrencias[], int diaOcorrencia) {
             diaMin = (numOcorrencias + 1);
         }
     }
-    printf("\nO Valor minimo de ocorrencia foi de %d no dia %d", minNumOcorrencia, diaMin);
+    printf("\n***** O Valor minimo de ocorrencia foi de %d no dia %d *****\n", minNumOcorrencia, diaMin);
 }
 
 //Função para calcular a média da ocorrencia:
@@ -134,7 +134,7 @@ int main() {
                     printf("\n***** Opcao invalida *****\n");
                 } else {
                     float numMediaOcorrencia = mediaOcorrencia(ocorrencias, diaOcorrencia);
-                    printf("\nA media das ocorrencias = %.2f", numMediaOcorrencia);
+                    printf("\n***** A media das ocorrencias = %.2f *****\n", numMediaOcorrencia);
                 }
                 break;
             case 4: //Maximo de ocorrencias e dia respectivo.
