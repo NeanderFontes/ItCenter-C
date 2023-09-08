@@ -58,7 +58,7 @@ void maxOcorrencia(int ocorrencias[], int diaOcorrencia) {
             diaMax = (numOcorrencias + 1);
         }
     }
-    printf("\nO Valor maximo de ocorrencia foi de: %d no dia: %d", maxNumOcorrencia, diaMax);
+    printf("\nO Valor maximo de ocorrencia foi de %d no dia %d", maxNumOcorrencia, diaMax);
 }
 
 //Função para preencher o min de numero de ocorrencias:
@@ -71,7 +71,7 @@ void minOcorrencia(int ocorrencias[], int diaOcorrencia) {
             diaMin = (numOcorrencias + 1);
         }
     }
-    printf("\nO Valor minimo de ocorrencia foi de: %d no dia: %d", minNumOcorrencia, diaMin);
+    printf("\nO Valor minimo de ocorrencia foi de %d no dia %d", minNumOcorrencia, diaMin);
 }
 
 //Função para calcular a média da ocorrencia:
@@ -97,116 +97,68 @@ int main() {
     int opcaoMenu, numOcorrencias = 0, diaOcorrencia = 0;
 
     //Entrada e saída de dados formatados:
+    
     do {
-        //Menu Inicial:
+        //Menu Após preencher numero de ocorrencias:
         printf("\n1 - Definir o numero de ocorrencias.");
+        if(numOcorrencias) {
+            printf("\n2 - Preencher ocorrencias.");
+        }
+        if(numOcorrencias > 1 && diaOcorrencia > 1) {
+            printf("\n3 - Media das ocorrencias.");
+            printf("\n4 - Maximo de ocorrencias e dia respectivo.");
+            printf("\n5 - Minimo de ocorrencias e dia respectivo.");
+        }
         printf("\n6 - Sair");
         printf("\nEscolha uma opcao desejada: ");
         scanf("%d", &opcaoMenu);
 
         switch(opcaoMenu) {
-            case 1: //Definir numero de ocorrencias
-                diaOcorrencia = 0;
-                numOcorrencias = validarOcorrencias();
+            case 1:
+                if(numOcorrencias == 0) {
+                    numOcorrencias = validarOcorrencias();
+                } else {
+                    printf("\nValor ja preenchido");
+                }
                 break;
-            case 6: //sair
+            case 2: //Preencher ocorrencias
+                if(numOcorrencias <= 0 || numOcorrencias > MAX) {
+                    printf("\n***** Opcao invalida *****\n");
+                } else {
+                    preencherOcorrencia(ocorrencias, numOcorrencias);
+                    diaOcorrencia = numOcorrencias;
+                }
+                break;
+            case 3: //Calcular Média:
+                if(diaOcorrencia <= 0) {
+                    printf("\n***** Opcao invalida *****\n");
+                } else {
+                    float numMediaOcorrencia = mediaOcorrencia(ocorrencias, diaOcorrencia);
+                    printf("\nA media das ocorrencias = %.2f", numMediaOcorrencia);
+                }
+                break;
+            case 4: //Maximo de ocorrencias e dia respectivo.
+                if(diaOcorrencia <= 0) {
+                    printf("\n***** Opcao invalida *****\n");
+                } else {
+                    maxOcorrencia(ocorrencias, diaOcorrencia);
+                }
+                break;
+            case 5: //Minimo de ocorrencias e dia respectivo.
+                if(diaOcorrencia <= 0) {
+                    printf("\n***** Opcao invalida *****\n");
+                } else {
+                    minOcorrencia(ocorrencias, diaOcorrencia);
+                }
+                break;
+            case 6: //Sair
                 printf("\n>> Sair do programa.");
                 break;
                 exit(0);
             default:
                 printf("\n***** Opcao invalida *****\n");
         }
-
-        while (numOcorrencias > 0) {
-            //Menu secundario após ler corretamente numero de ocorrencias:
-            printf("\n1 - Definir o numero de ocorrencias.");
-            printf("\n2 - Preencher ocorrencias.");
-            printf("\n6 - Sair");
-            printf("\nEscolha uma opcao desejada: ");
-            scanf("%d", &opcaoMenu);
-
-            if(opcaoMenu == 6) {
-                printf("\n>> Sair do programa.");
-                exit(0);
-            } else {
-                switch(opcaoMenu) {
-                    case 1: //Definir numero de ocorrencias
-                        numOcorrencias = validarOcorrencias();
-                        break;
-                    case 2: //Preencher ocorrencias
-                        if(numOcorrencias <= 0 || numOcorrencias > MAX) {
-                            printf("\nDefina o numero de ocorrencias correto.");
-                        } else {
-                            preencherOcorrencia(ocorrencias, numOcorrencias);
-                        }
-                        break;
-                    case 6: //sair
-                        printf("\n>> Sair do programa.");
-                        exit(0);
-                    default:
-                        printf("\n***** Opcao invalida *****\n");
-                }
-            }            
-        }
-
-        while (diaOcorrencia > 0) {
-            //Menu Após preencher numero de ocorrencias:
-            printf("\n1 - Definir o numero de ocorrencias.");
-            printf("\n2 - Preencher ocorrencias.");
-            printf("\n3 - Media das ocorrencias.");
-            printf("\n4 - Maximo de ocorrencias e dia respectivo.");
-            printf("\n5 - Minimo de ocorrencias e dia respectivo.");
-            printf("\n6 - Sair");
-            printf("\nEscolha uma opcao desejada: ");
-            scanf("%d", &opcaoMenu);
-
-            if(opcaoMenu == 6) {
-                printf("\n>> Sair do programa.");
-                exit(0);
-            } else {
-                switch(opcaoMenu) {
-                    case 1: //Definir numero de ocorrencias
-                        numOcorrencias = validarOcorrencias();
-                        break;
-                    case 2: //Preencher ocorrencias
-                        if(numOcorrencias <= 0 || numOcorrencias > MAX) {
-                            printf("\nDefina o numero de ocorrencias correto.");
-                        } else {
-                            preencherOcorrencia(ocorrencias, numOcorrencias);
-                        }
-                        break;
-                    case 3: //Calcular Média:
-                        if(diaOcorrencia <= 0) {
-                            printf("\nNao ha ocorrencias para calcular a media.");
-                        } else {
-                            float numMediaOcorrencia = mediaOcorrencia(ocorrencias, diaOcorrencia);
-                            printf("\nA media das ocorrencias = %.2f", numMediaOcorrencia);
-                        }
-                        break;
-                    case 4: //Maximo de ocorrencias e dia respectivo.
-                        if(diaOcorrencia <= 0) {
-                            printf("\nNao ha ocorrencias para calcular a maximo.");
-                        } else {
-                            maxOcorrencia(ocorrencias, diaOcorrencia);
-                        }
-                        break;
-                    case 5: //Minimo de ocorrencias e dia respectivo.
-                        if(diaOcorrencia <= 0) {
-                            printf("\nNao ha ocorrencias para calcular a minimo.");
-                        } else {
-                            minOcorrencia(ocorrencias, diaOcorrencia);
-                        }
-                        break;
-                    case 6: //sair
-                        printf("\n>> Sair do programa.");
-                        exit(0);
-                    default:
-                        printf("\n***** Opcao invalida *****\n");
-                }
-            }            
-        }
-
-    } while(opcaoMenu != 6); 
+    } while(opcaoMenu != 6);
     
     //Final do Programa.
     printf("\n=========================== FIM ================================\n");
