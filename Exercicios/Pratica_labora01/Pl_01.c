@@ -8,13 +8,6 @@
 //Constante para array definido máximo:
 #define MAX 10
 
-
-//Função para "Opção 1" preencher numOcorrencias:
-void ocorrenciaGeral(int numOcorrencias) {
-    printf("\nIntroduza o numero de ocorrencias: ");
-    scanf("%d", numOcorrencias);
-}
-
 //Função para preenchimento de numero de dias registrado:
 int diasNumOcorrencias() {
     int numDias;
@@ -99,40 +92,51 @@ int main() {
 
         switch(opcaoMenu) {
             case 1: //Definir numero de ocorrencias
-                ocorrenciaGeral(numOcorrencias);
+                diaOcorrencia = 0;
+                printf("\nIntroduza o numero de ocorrencias: ");
+                scanf("%d", &numOcorrencias);
                 break;
             case 6: //sair
-                printf("\n» Sair do programa.");
+                printf("\n>> Sair do programa.");
                 break;
             default:
                 printf("\n***** Opcao invalida *****\n");
         }
-        if(numOcorrencias > 0) {
-            //Menu após ler corretamente numero de ocorrencias:
+
+        if (numOcorrencias > 0) {
+            //Menu secundario após ler corretamente numero de ocorrencias:
             printf("\n1 - Definir o numero de ocorrencias.");
             printf("\n2 - Preencher ocorrencias.");
             printf("\n6 - Sair");
             printf("\nEscolha uma opcao desejada: ");
             scanf("%d", &opcaoMenu);
 
-        switch(opcaoMenu) {
-            case 1: //Definir numero de ocorrencias
-                ocorrenciaGeral(numOcorrencias);
+            if(opcaoMenu == 6) {
+                printf("\n>> Sair do programa.");
                 break;
-            case 2: //Preencher ocorrencias
-                if(numOcorrencias <= 0 || numOcorrencias > MAX) {
-                    printf
+            } else {
+                switch(opcaoMenu) {
+                    case 1: //Definir numero de ocorrencias
+                        printf("\nIntroduza o numero de ocorrencias: ");
+                        scanf("%d", &numOcorrencias);
+                        break;
+                    case 2: //Preencher ocorrencias
+                        if(numOcorrencias <= 0 || numOcorrencias > MAX) {
+                            printf("\nDefina o numero de ocorrencias correto.");
+                        } else {
+                            preencherOcorrencia(ocorrencias, numOcorrencias);
+                        }
+                        break;
+                    case 6: //sair
+                        printf("\n>> Sair do programa.");
+                        break;
+                    default:
+                        printf("\n***** Opcao invalida *****\n");
                 }
-                ocorrenciaGeral(numOcorrencias);
-                break;
-            case 6: //sair
-                printf("\n» Sair do programa.");
-                break;
-            default:
-                printf("\n***** Opcao invalida *****\n");
-        }
+            }
+            
         } else {
-            printf("\nPreencha o numero de ocorrencias para continuar.");
+            printf("\nDefina o numero de ocorrencias correto.");
         }
 
     } while(opcaoMenu != 6); 
