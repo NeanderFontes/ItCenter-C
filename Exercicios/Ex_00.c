@@ -11,11 +11,11 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
     
     //Inicio do programa:
-    printf("\n=================== COMEÇO DO PROGRAMA EM C ===================\n");
+    printf("\n=================== COMECO DO PROGRAMA EM C ====================\n");
     
     //Declaração de variáveis e resultados:
     
     //Final do Programa.
-    printf("\n================================================================\n");
+    printf("\n=========================== FIM ================================\n");
     return 0;
 }

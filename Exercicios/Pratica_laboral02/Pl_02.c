@@ -6,3 +6,24 @@
 // 4) Criar procedimento para o jogo:
 //     a. Indicar o jogador que está ganhando.
 //     b. Iserir coordenadas válidas para preencher tabuleiro e mostrar o mesmo.
+
+//Diretivas de pré-processamento:
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <locale.h>
+
+//Função main:
+int main() {
+    //Bibliteca ortográfica:
+    setlocale(LC_ALL, "Portuguese");
+    
+    //Inicio do programa:
+    printf("\n=================== COMECO DO PROGRAMA EM C ====================\n");
+    
+    //Declaração de variáveis e resultados:
+    
+    //Final do Programa.
+    printf("\n=========================== FIM ================================\n");
+    return 0;
+}
